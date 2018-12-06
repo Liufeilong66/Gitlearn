@@ -1,34 +1,22 @@
-查看当前库的用户名和邮箱命令：
-
-
+1、用户名和邮箱命令
+查看当前库的用户名和邮箱
 git config user.name
-
-
 git config user.email
-
-
-
-
 设置当前库的用户名和密码
-
 git config user.name "Sallenkey"
-
-
 git config user.email "xxx@163.com"
-
-
-
-
-
-查看全局库的用户名和邮箱命令：
+查看全局库的用户名和邮箱
 git config --global user.name 
-
 git config --global user.email 
-
-设置全局的用户名和密码
-
-
+设置全局库的用户名和密码
 git config --global user.name "Sallenkey"
-
-
 git config --global user.email "xxx@163.com"
+2、部分操作指令
+git status：随时掌握工作区的状态
+git diff：查看修改内容 （当git status告诉你有文件被修改过）
+git reset --hard commit_id：在版本的历史之间穿梭，其中commit_id可换成HEAD、HEAD^、HEAD^^，HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^。
+git log：可以查看提交历史，以便确定要回退到哪个版本，即找到上面命令中的commit_id
+git reflog:查看命令历史，以便确定要回到未来的哪个版本
+git checkout -- <file>：将文件在工作区的修改全部撤销，例git checkout -- readme.txt
+git reset HEAD <file>:可以把暂存区的修改撤销掉,重新放回工作区,例git reset HEAD readme.txt
+git rm<file>：从版本库中删除该文件，例git rm test.txt
